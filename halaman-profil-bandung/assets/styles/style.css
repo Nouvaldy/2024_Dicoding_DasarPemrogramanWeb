@@ -1,3 +1,4 @@
+/*Phone size*/
 body {
   font-family: 'Quicksand', sans-serif;
   margin: 0;
@@ -69,6 +70,8 @@ nav li{
 nav{
   background-color: #00a2c6;
   padding: 5px;
+  position: sticky;
+  top: 0;
 }
 
 #content{
@@ -83,4 +86,22 @@ main{
 aside{
   float: right;
   width: 25%;
+}  
+
+header{
+  display: inline;
+}
+
+/*Less than laptop size*/
+@media screen and (max-width:1024px) {
+
+#content, aside{
+  width: 100%; 
+  padding:0;
+}
+
+.profile img{
+  width: 200px;
+}
+  
 }

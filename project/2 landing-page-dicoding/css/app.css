@@ -50,7 +50,7 @@ body {
 }
 
 .navbar-container .nav-list ul li a {
-    padding: 0.5rem, 1.5rem; 
+    padding: 0.5rem 1.5rem;
     border-radius: 999px;
 
     text-decoration: none;
@@ -155,11 +155,18 @@ main aside {
     /*The inset-block property sets the distance between
     an element and the parent element in the block direction
     (y-axis)*/
+    inset-block: 0;
 
     /*The inset-inline-end property sets the distance between
     the end of an element and the parent element in the inline
     direction (x-axis)*/
     inset-inline-end: 0;
+}
+
+/*Bikin ul ditengah y-axis*/
+main aside .social-media {
+    height: 100%;
+    display: flex;
 }
 
 main aside ul {
@@ -189,4 +196,32 @@ main aside ul li a {
 
 main aside ul li a:hover {
     color: #89b0d9;
+}
+
+/*Screen Hape*/
+@media screen and (max-width:768px) {
+    .navbar-container {
+        flex-direction: column;
+    }
+
+    .navbar-container .nav-list ul {
+        flex-wrap: wrap;
+        column-gap: 0.5rem;
+    }
+    
+    main {
+        padding-block: 1rem; /*Sebelumnya 2rem 4rem*/
+    }
+     
+      main .content {
+        flex-direction: column-reverse;
+        gap: 2rem;
+    }
+     
+      main .content .content-desc .title {
+        font-size: 3rem; /*Sebelumnya 3.5rem*/
+    }
+      main .content .content-desc p {
+        font-size: 1rem; /*Sebelumnya 1.2rem*/
+    }
 }

@@ -1,0 +1,192 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+ 
+body {
+  font-family: 'Quicksand', sans-serif;
+
+  /*vh  Relative to 1% of height of the viewport*/
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  
+  /*Defaultnya flex-direction:row*/
+  flex-direction: column;
+}
+
+.navbar-container {
+    width: 100%;
+    max-width: 1200px;
+
+    /*rem	Relative to font-size of the root element*/
+    padding: 1rem 0;
+    margin: 0 auto;
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    /*Agar selalu tampil paling depan*/
+    z-index: 9999; 
+}
+
+.navbar-container .logo img {
+    width: 150px;
+}
+
+.navbar-container .nav-list ul {
+    padding-left: 0; 
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem 1rem;
+}
+
+.navbar-container .nav-list ul li {
+    list-style-type: none;
+}
+
+.navbar-container .nav-list ul li a {
+    padding: 0.5rem, 1.5rem; 
+    border-radius: 999px;
+
+    text-decoration: none;
+    font-size: 1.05rem; 
+    font-weight: 500; 
+    color: black;  
+    
+    /*Menambah animasi saat nanti hover*/
+    transition: all 0.2s ease-in-out;
+}
+
+.navbar-container .nav-list ul li a:hover {
+    background-color: #425c77;
+    color: white;
+}
+
+main {
+    flex: 1;
+    
+    width: 100%;
+    max-width: 1200px;
+
+    margin-inline: auto;
+    padding: 2rem 4rem;
+
+    display: flex;
+    align-items: center;
+}
+
+main .content {
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+}
+
+main .content .content-desc {
+    flex: 1;
+}
+
+main .content .content-img {
+    flex: 1;
+}
+
+main .content .content-desc .title {
+    margin-block: 1rem;
+   
+    font-size: 3.5rem;
+}
+
+ 
+main .content .content-desc p {
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+}
+
+main .content .content-desc button {
+    padding: 0.8rem 2.5rem;
+
+    /*Transparan. Karena pada defaultnya button sudah ada
+    black bordernya*/
+    border: 3px solid transparent;
+    border-radius: 999px;
+    margin-top: 1rem;
+
+    background-color: #2d3e50;
+
+    /*Atur font lagi karena font button berbeda dari body*/
+    font-family: 'Quicksand', sans-serif;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 700;
+    color: white;
+
+    /*Jari telunjuk*/
+    cursor: pointer;
+    transition: all 0.15s ease-in-out;
+}
+
+main .content .content-desc button:hover {
+    border: 3px solid #2d3e50;
+    background-color: transparent;
+    color: #2d3e50;
+}
+
+main .content .content-img {
+    flex: 1;
+   
+    /*Nengahin gambar*/
+    display: flex;
+}
+
+main .content .content-img img {
+    width: 300px;
+    min-width: 250px;
+    margin: auto;
+}
+
+main aside {
+    position: fixed;
+
+    /*The inset-block property sets the distance between
+    an element and the parent element in the block direction
+    (y-axis)*/
+
+    /*The inset-inline-end property sets the distance between
+    the end of an element and the parent element in the inline
+    direction (x-axis)*/
+    inset-inline-end: 0;
+}
+
+main aside ul {
+    padding: 1.5rem 1rem;
+    margin: auto;
+    background-color: #2d3e50;
+    border-radius: 12px 0 0 12px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+main aside ul li {
+    list-style-type: none;
+}
+
+main aside ul li a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: white;
+
+    transition: all 0.1s ease-in-out;
+}
+
+main aside ul li a:hover {
+    color: #89b0d9;
+}

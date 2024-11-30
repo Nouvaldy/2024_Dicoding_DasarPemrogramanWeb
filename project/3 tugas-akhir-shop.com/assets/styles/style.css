@@ -65,12 +65,41 @@ nav ul li a.beranda::after {
     background: black;
 }
 
-nav ul li a:hover::after {
+nav ul li>a:hover::after {
     content: '';
     display: block;
     width: 15px;
     height: 1px;
     background: rgb(180, 180, 180);
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.show {
+    display:block;
 }
 
 main {
@@ -151,7 +180,7 @@ footer {
     font-weight: bold;
   }
 
-@media screen and (max-width:880px) {
+@media screen and (max-width:890px) {
     article {
         text-align: center;
     }

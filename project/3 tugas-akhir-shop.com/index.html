@@ -4,8 +4,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Shop.com</title>
  
+    <!-- My JS -->
+    <script src="assets/js/script.js"></script>
+
     <!-- My Own CSS -->
-    <link rel="stylesheet" href="assets/styles/style.css" />
+    <link rel="stylesheet" href="assets/styles/style.css">
 
     <!-- Font Poppins & Playfair Display -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,7 +22,14 @@
         <nav>
             <ul>
                 <li><a class="beranda" href="#">Beranda</a></li>
-                <li><a href="#">Produk</a></li>
+                <li class="dropdown">
+                  <a class="dropbtn" href="javascript:myFunction();" >Produk</a>
+                  <div id="myDropdown" class="dropdown-content">
+                    <a href="#">Shirts</a>
+                    <a href="#">Jeans</a>
+                    <a href="#">Chinos</a>
+                  </div>
+                </li>
                 <li><a href="#">Ulasan</a></li>
                 <li><a href="#">Keranjang</a></li>
             </ul>
@@ -40,7 +50,7 @@
         </aside>
     </main>
     <footer> 
-      <p> &#169; 2019, Shop.com</p>
+      <p> &#169; 2024, Shop.com</p>
     </footer>
   </body>
 </html>

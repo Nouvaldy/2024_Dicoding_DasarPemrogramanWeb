@@ -38,6 +38,10 @@ header .logo {
     width: 150px;
 }
 
+header a.icon {
+    display: none;
+}
+
 nav ul {
     display: flex;
     justify-content: center;
@@ -209,17 +213,47 @@ footer {
 
 @media screen and (max-width:768px) {
     header {
-        flex-direction: column;
+        display:flex;
     }
 
-    header ul {
-        flex-wrap: wrap;
-        column-gap: 0.5rem;
+    /* Style the hamburger menu */
+    header a.icon {
+        display: block;
+        font-size: 150%;
+    }
+
+    /*Tying to fix the nav*/
+
+    header .logo-burger {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    header .logo {
+        width: 50%;
+    }
+
+    header nav ul li a {
+        font-size: 1.25rem; /* Adjust size for child text elements */
+    }
+
+    header {
+     flex-direction: column;
+    }
+
+    .nav-ul {
+    display: none;
+    row-gap: 0.1rem;
     }
     
     main {
         flex-direction: column;
         padding-block: 1rem;
         gap: 4rem;
+    }
+
+    article h1 {
+        font-size: 2rem;
     }
 }

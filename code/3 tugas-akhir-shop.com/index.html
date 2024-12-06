@@ -7,6 +7,9 @@
     <!-- My JS -->
     <script src="assets/js/script.js"></script>
 
+    <!-- CDN font-awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <!-- My Own CSS -->
     <link rel="stylesheet" href="assets/styles/style.css">
 
@@ -18,9 +21,14 @@
   </head>
   <body>
     <header>
+      <div class="logo-burger">
         <img class="logo" src="assets/image/logo.svg" alt="logo">
+        <a href="javascript:myBurger();", class="icon">
+          <i class="fa-solid fa-bars"></i>
+        </a>
+      </div>
         <nav>
-            <ul>
+            <ul class="nav-ul">
                 <li><a class="beranda" href="#">Beranda</a></li>
                 <li class="dropdown">
                   <a class="dropbtn" href="javascript:myFunction();" >Produk</a>

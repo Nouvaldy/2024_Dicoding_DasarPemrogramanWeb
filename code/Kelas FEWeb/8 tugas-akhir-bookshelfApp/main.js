@@ -17,7 +17,7 @@ function addBook() {
     saveToStorage();
 
     // Tampilkan toast message
-    showToast(`Buku "${bookTitle}" berhasil ditambahkan!`);
+    showToast(`"${bookTitle}" berhasil ditambahkan!`);
 }
 
 //Memindahkan buku dari rak inComplete ke rak complete
@@ -28,12 +28,18 @@ function switchBookshelf(bookListId) {
     bookTarget.isComplete = !bookTarget.isComplete;
     renderBooks(bookList);
     saveToStorage();
+
+    // Tampilkan toast message
+    showToast(`"${bookTarget.title}" berhasil dipindahkan!`);
 }
 
 //Menghapus buku
 function removeBook(bookListId) {
     const bookTarget = findBookIndex(bookListId);
     if (bookTarget == -1) return;
+
+    // Tampilkan toast message
+    showToast(`"${bookList[bookTarget].title}" berhasil dihapus!`);
 
     bookList.splice(bookTarget, 1);
     renderBooks(bookList);
@@ -60,6 +66,9 @@ function editBook(bookListId) {
     // Trigger render ulang
     renderBooks(bookList);
     saveToStorage();
+
+    // Tampilkan toast message
+    showToast(`"${newTitle}" berhasil diperbarui!`);
 }
 
 
